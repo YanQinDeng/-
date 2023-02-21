@@ -1,4 +1,4 @@
-### yolov7
+### yolov7：[论文地址](https://arxiv.org/pdf/2207.02696.pdf)
 #### 前言
 - 在不同的edge device上速度优化
 - edge CPU：MCUNet、NanoDet
@@ -21,3 +21,8 @@
   - 深度：网络层的数量
   - 宽度：channel的数量
   - stage：特征金字塔的数量
+#### 网络结构
+![image](https://user-images.githubusercontent.com/71308638/220270141-fd20de2c-207c-41ec-aa42-65071215f8d6.png)
+- ELAN 只改变通道大小，不改变尺寸，输入:w,h,c，输出：w,h,2c
+- MP1 不改变通道，缩小尺寸，输入:w,h,c，输出：w/2,h/2,c
+- MP2 改变通道，
